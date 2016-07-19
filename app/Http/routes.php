@@ -9,7 +9,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('Articulos', function(){
+Route::get('Articulos',['middleware' => 'esdomingo'], function(){
     dd(\App\Articulo::all());
 });
 
